@@ -4,13 +4,15 @@ namespace Project0{
 
         internal string name{get; set;}
         
-        internal int customerId{get; set;}
+        internal Guid id = Guid.NewGuid();
+
+        internal List<Order> orderHistory = new List<Order>();
        
 
-        public Customer(string name, int customerId){
+        public Customer(string name){
 
             this.name = name;
-            this.customerId = customerId;
+           
 
         }
     }

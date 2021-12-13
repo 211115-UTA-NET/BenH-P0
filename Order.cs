@@ -4,21 +4,22 @@ namespace Project0{
 
         protected string storeName;
         internal Dictionary<string, int> order = new Dictionary<string, int>();
-        protected int customerId;
+        protected Customer customer;
+        protected Location store;
         private DateTime date = DateTime.Now;
 
 
-        public Order(string storeName, int customerId)
+        public Order(Location store, Customer customer)
         {
-            this.storeName = storeName;
-            this.customerId = customerId;
+            this.store = store;
+            this.customer = customer;
         }
 
         public void addToOrder(string product, int quantity){
 
             order.Add(product.ToLower(), quantity);
         }
-        public void placeOrder(Location store, Dictionary<string, int> order){
+        public void placeOrder(){
 
             foreach(KeyValuePair<string, int> entry in order){
             
@@ -36,7 +37,7 @@ namespace Project0{
                 }
                 else
                 {
-                     Console.WriteLine($"Customer#{customerId} has successfully placed an order of {entry.Value} {entry.Key}s at {date}");
+                     Console.WriteLine($"{customer.name} has successfully placed an order of {entry.Value} {entry.Key}s at {date}");
                      store.inventory[entry.Key] = store.inventory[entry.Key] - entry.Value;
                 }
             }

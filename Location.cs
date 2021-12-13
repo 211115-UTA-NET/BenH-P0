@@ -4,7 +4,7 @@ namespace Project0{
 
         internal string storeName;
         internal Dictionary<string, int> inventory = new Dictionary<string, int>();
-
+        internal List<Order> orderHistory = new List<Order>();
         public Location(string storeName){
 
             this.storeName = storeName;

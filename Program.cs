@@ -4,8 +4,10 @@
 
         public static void Main(string[] args){
 
-                // Customer customer = new Customer("Ben", 00001);
-                // Console.WriteLine(customer.name);
+                 Customer Ben = new Customer("Ben");
+                 Customer Tyn = new Customer("Tyn");
+                 Console.WriteLine(Ben.id.ToString());
+                 Console.WriteLine(Tyn.id.ToString());
                 // Location location = new Location("Lucharitos");
                 // location.addInventory("Burritos", 500);
                 // location.addInventory("tacos", 500);
