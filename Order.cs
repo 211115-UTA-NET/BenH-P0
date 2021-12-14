@@ -13,6 +13,8 @@ namespace Project0{
         {
             this.store = store;
             this.customer = customer;
+            customer.orderHistory.Add(this);
+            store.orderHistory.Add(this);
         }
 
         public void addToOrder(string product, int quantity){
@@ -39,7 +41,7 @@ namespace Project0{
                 {
                      Console.WriteLine($"{customer.name} has successfully placed an order of {entry.Value} {entry.Key}s at {date}");
                      store.inventory[entry.Key] = store.inventory[entry.Key] - entry.Value;
-                     customer.orderHistory.Add(Order);
+                     
 
                 }
             }
