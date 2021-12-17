@@ -39,7 +39,7 @@ namespace Project0{
                 }
                 else
                 {
-                     Console.WriteLine($"{customer.name} has successfully placed an order of {entry.Value} {entry.Key}s at {date}");
+                     Console.WriteLine($"{customer.firstName} {customer.lastName} has successfully placed an order of {entry.Value} {entry.Key}s at {date}");
                      store.inventory[entry.Key] = store.inventory[entry.Key] - entry.Value;
                      
 
