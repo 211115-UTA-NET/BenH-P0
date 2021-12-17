@@ -1,4 +1,4 @@
-namespace Project0{
+namespace Project0.Program{
 
     using System.Data.SqlClient;
     
