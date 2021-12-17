@@ -6404,6 +6404,7 @@
     "net6.0": [
       "Microsoft.NET.Test.Sdk >= 16.11.0",
       "Project0 >= 1.0.0",
+      "System.Data.SqlClient >= 4.8.3",
       "coverlet.collector >= 3.1.0",
       "xunit >= 2.4.1",
       "xunit.runner.visualstudio >= 2.4.3"
@@ -6415,11 +6416,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0\\Project0.Tests\\Project0.Tests\\Project0.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0\\Project0.Tests\\Project0.tests\\Project0.Tests.csproj",
       "projectName": "Project0.Tests",
-      "projectPath": "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0\\Project0.Tests\\Project0.Tests\\Project0.Tests.csproj",
+      "projectPath": "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0\\Project0.Tests\\Project0.tests\\Project0.Tests.csproj",
       "packagesPath": "C:\\Users\\bbruc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0\\Project0.Tests\\Project0.Tests\\obj\\",
+      "outputPath": "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0\\Project0.Tests\\Project0.tests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\bbruc\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6455,6 +6456,10 @@
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
             "version": "[16.11.0, )"
+          },
+          "System.Data.SqlClient": {
+            "target": "Package",
+            "version": "[4.8.3, )"
           },
           "coverlet.collector": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
