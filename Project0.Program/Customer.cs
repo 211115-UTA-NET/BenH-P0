@@ -32,7 +32,7 @@ namespace Project0{
         //     command.ExecuteNonQuery();
         //     connection.Close();
 
-        //     Customer customer = new Customer(firstName, lastName);
+         //    Customer customer = new Customer(firstName, lastName);
         // }
     }
 }
