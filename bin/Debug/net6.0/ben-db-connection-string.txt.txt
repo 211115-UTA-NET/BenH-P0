@@ -1,1 +1,0 @@
-Server=tcp:211115-sql-herbertb.database.windows.net,1433;Initial Catalog=211115-SQL-HERBERTB;Persist Security Info=False;User ID=SQLDBADMIN;Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
