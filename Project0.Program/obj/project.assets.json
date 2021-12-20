@@ -131,21 +131,11 @@
           }
         }
       },
-      "Project0.App/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "compile": {
-          "bin/placeholder/Project0.App.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Project0.App.dll": {}
-        }
-      },
       "Project0.DB/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "Project0.App": "1.0.0",
+          "./Project0.Logic/Project0.Logic.csproj": "(, )",
           "System.Data.SqlClient": "4.8.3"
         },
         "compile": {
@@ -153,6 +143,19 @@
         },
         "runtime": {
           "bin/placeholder/Project0.DB.dll": {}
+        }
+      },
+      "Project0.Logic/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "System.Data.SqlClient": "4.8.3"
+        },
+        "compile": {
+          "bin/placeholder/Project0.Logic.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Project0.Logic.dll": {}
         }
       }
     }
@@ -471,21 +474,21 @@
         "version.txt"
       ]
     },
-    "Project0.App/1.0.0": {
-      "type": "project",
-      "path": "../Project0.App/Project0.App.csproj",
-      "msbuildProject": "../Project0.App/Project0.App.csproj"
-    },
     "Project0.DB/1.0.0": {
       "type": "project",
-      "path": "../Project0.DB/Project0.DB/Project0.DB.csproj",
-      "msbuildProject": "../Project0.DB/Project0.DB/Project0.DB.csproj"
+      "path": "../Project0.DB/Project0.DB.csproj",
+      "msbuildProject": "../Project0.DB/Project0.DB.csproj"
+    },
+    "Project0.Logic/1.0.0": {
+      "type": "project",
+      "path": "../Project0.Logic/Project0.Logic.csproj",
+      "msbuildProject": "../Project0.Logic/Project0.Logic.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Project0.App >= 1.0.0",
       "Project0.DB >= 1.0.0",
+      "Project0.Logic >= 1.0.0",
       "System.Data.SqlClient >= 4.8.3"
     ]
   },
@@ -516,11 +519,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0\\Project0.App\\Project0.App.csproj": {
-              "projectPath": "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0\\Project0.App\\Project0.App.csproj"
+            "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0\\Project0.DB\\Project0.DB.csproj": {
+              "projectPath": "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0\\Project0.DB\\Project0.DB.csproj"
             },
-            "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0\\Project0.DB\\Project0.DB\\Project0.DB.csproj": {
-              "projectPath": "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0\\Project0.DB\\Project0.DB\\Project0.DB.csproj"
+            "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0\\Project0.Logic\\Project0.Logic.csproj": {
+              "projectPath": "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0\\Project0.Logic\\Project0.Logic.csproj"
             }
           }
         }
@@ -558,5 +561,16 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Unable to find package ./Project0.Logic/Project0.Logic.csproj. No packages exist with this id in source(s): Microsoft Visual Studio Offline Packages, nuget.org",
+      "libraryId": "./Project0.Logic/Project0.Logic.csproj",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

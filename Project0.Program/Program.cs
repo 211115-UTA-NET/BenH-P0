@@ -2,7 +2,7 @@
     
     using System.Data.SqlClient;
     using Project0.DB;
-    using Project0.Program;
+    using Project0.App;
     
     public class Program{
 

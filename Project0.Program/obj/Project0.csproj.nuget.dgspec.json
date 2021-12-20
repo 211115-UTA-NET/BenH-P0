@@ -4,14 +4,14 @@
     "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0\\Project0.Program\\Project0.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0\\Project0.App\\Project0.App.csproj": {
+    "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0\\Project0.DB\\Project0.DB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0\\Project0.App\\Project0.App.csproj",
-        "projectName": "Project0.App",
-        "projectPath": "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0\\Project0.App\\Project0.App.csproj",
+        "projectUniqueName": "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0\\Project0.DB\\Project0.DB.csproj",
+        "projectName": "Project0.DB",
+        "projectPath": "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0\\Project0.DB\\Project0.DB.csproj",
         "packagesPath": "C:\\Users\\bbruc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0\\Project0.App\\obj\\",
+        "outputPath": "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0\\Project0.DB\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\bbruc\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,16 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "./Project0.Logic/Project0.Logic.csproj": {
+              "target": "Package",
+              "version": "(, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -58,14 +68,14 @@
         }
       }
     },
-    "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0\\Project0.DB\\Project0.DB\\Project0.DB.csproj": {
+    "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0\\Project0.Logic\\Project0.Logic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0\\Project0.DB\\Project0.DB\\Project0.DB.csproj",
-        "projectName": "Project0.DB",
-        "projectPath": "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0\\Project0.DB\\Project0.DB\\Project0.DB.csproj",
+        "projectUniqueName": "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0\\Project0.Logic\\Project0.Logic.csproj",
+        "projectName": "Project0.Logic",
+        "projectPath": "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0\\Project0.Logic\\Project0.Logic.csproj",
         "packagesPath": "C:\\Users\\bbruc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0\\Project0.DB\\Project0.DB\\obj\\",
+        "outputPath": "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0\\Project0.Logic\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\bbruc\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -81,11 +91,7 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {
-              "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0\\Project0.App\\Project0.App.csproj": {
-                "projectPath": "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0\\Project0.App\\Project0.App.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {
@@ -146,11 +152,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0\\Project0.App\\Project0.App.csproj": {
-                "projectPath": "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0\\Project0.App\\Project0.App.csproj"
+              "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0\\Project0.DB\\Project0.DB.csproj": {
+                "projectPath": "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0\\Project0.DB\\Project0.DB.csproj"
               },
-              "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0\\Project0.DB\\Project0.DB\\Project0.DB.csproj": {
-                "projectPath": "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0\\Project0.DB\\Project0.DB\\Project0.DB.csproj"
+              "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0\\Project0.Logic\\Project0.Logic.csproj": {
+                "projectPath": "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0\\Project0.Logic\\Project0.Logic.csproj"
               }
             }
           }

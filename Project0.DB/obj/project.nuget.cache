@@ -1,8 +1,38 @@
 {
   "version": 2,
-  "dgSpecHash": "D/bipFyBC6Q8/EXu8A7LA8wVTk9HDJQOZQtPE0/Kqw/FT/cQJ9JpmI92jQUAB5QLtCg3aplZ5DCVm7QNY9nSlg==",
-  "success": true,
+  "dgSpecHash": "HYDOq4h7nk+GdXrV0goYatQxEyYtwlBxS9QADzKyO56PKZzbkpbQxA5o3p5LWejDZAcPeMbch/MrJgWE8Uvlag==",
+  "success": false,
   "projectFilePath": "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0\\Project0.DB\\Project0.DB.csproj",
-  "expectedPackageFiles": [],
-  "logs": []
+  "expectedPackageFiles": [
+    "C:\\Users\\bbruc\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\bbruc\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\bbruc\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
+    "C:\\Users\\bbruc\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\bbruc\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\bbruc\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\bbruc\\.nuget\\packages\\system.data.sqlclient\\4.8.3\\system.data.sqlclient.4.8.3.nupkg.sha512",
+    "C:\\Users\\bbruc\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
+    "C:\\Users\\bbruc\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1604",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Project dependency ./Project0.Logic/Project0.Logic.csproj does not contain an inclusive lower bound. Include a lower bound in the dependency version to ensure consistent restore results.",
+      "libraryId": "./Project0.Logic/Project0.Logic.csproj",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v6.0"
+      ]
+    },
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Unable to find package ./Project0.Logic/Project0.Logic.csproj. No packages exist with this id in source(s): Microsoft Visual Studio Offline Packages, nuget.org",
+      "libraryId": "./Project0.Logic/Project0.Logic.csproj",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

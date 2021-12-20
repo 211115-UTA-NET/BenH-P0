@@ -1,7 +1,7 @@
 namespace Project0.DB{
 
     using System.Data.SqlClient;
-    using Project0.Program;
+    using 
     using System.Linq;
 
     public class DBInteraction : IDBCommands{
@@ -70,6 +70,20 @@ namespace Project0.DB{
             connection.Close();
 
             return result;
+
+        }
+
+        public void listOrderDetailsOfCustomer(string firstName, string lastName)
+        {
+            using SqlConnection connection = new(connectionString);
+            connection.Open();
+
+            using SqlCommand command = new(@"SELECT * FROM Customer WHERE firstName = @firstName AND lastName = @lastName", connection);
+
+            command.Parameters.AddWithValue("@firstName", firstName);
+            command.Parameters.AddWithValue("@lastName", lastName);
+
+            using SqlDataReader reader = command.ExecuteReader();
 
         }
     }
