@@ -1,6 +1,7 @@
 ﻿namespace Project0.Program{
     
     using System.Data.SqlClient;
+    using Project
     public class Program{
 
         public static string connectionString = File.ReadAllText("ben-db-connection-string.txt");
