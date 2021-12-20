@@ -15,7 +15,27 @@
       "ProjectGuid": "e4bc81e0-9dd2-4abe-8b8e-e2508697cc6a",
       "DisplayName": "Project0.DB",
       "ColorIndex": 1
+    },
+    "57cb4ea7-06f2-4f38-a544-3b58d07e8437": {
+      "ProjectGuid": "57cb4ea7-06f2-4f38-a544-3b58d07e8437",
+      "DisplayName": "Project0",
+      "ColorIndex": 2
+    },
+    "6825dd28-ce7d-4f50-9a0a-49d181f6a596": {
+      "ProjectGuid": "6825dd28-ce7d-4f50-9a0a-49d181f6a596",
+      "DisplayName": "Project0.Logic",
+      "ColorIndex": 3
+    },
+    "15c16b34-f300-4b12-b760-ad7e9e83794c": {
+      "ProjectGuid": "15c16b34-f300-4b12-b760-ad7e9e83794c",
+      "DisplayName": "Project0.DB",
+      "ColorIndex": 4
+    },
+    "17048b6b-53ae-4fff-8d56-bce47a11a98b": {
+      "ProjectGuid": "17048b6b-53ae-4fff-8d56-bce47a11a98b",
+      "DisplayName": "Project0.Tests",
+      "ColorIndex": 5
     }
   },
-  "NextColorIndex": 2
+  "NextColorIndex": 6
 }

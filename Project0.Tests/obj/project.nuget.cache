@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "SO0TzBx275vMdJmybh9TPOhrO4d8oyJ+h/d86PbWSC1f4HbD6VgXYG2of2YXc/gayw83YzrAzQLAgHkbkX/MAA==",
-  "success": false,
+  "dgSpecHash": "ttccRdGUi6NBs9Lb4XA4n6Xx50R0NsMT4v/b3RNXYOpzemX0PLKRsLJfr3j3k1jjn94X0pENX/VbwKdHRUs7Nw==",
+  "success": true,
   "projectFilePath": "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0\\Project0.Tests\\Project0.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\bbruc\\.nuget\\packages\\coverlet.collector\\3.1.0\\coverlet.collector.3.1.0.nupkg.sha512",
@@ -105,15 +105,5 @@
     "C:\\Users\\bbruc\\.nuget\\packages\\xunit.extensibility.execution\\2.4.1\\xunit.extensibility.execution.2.4.1.nupkg.sha512",
     "C:\\Users\\bbruc\\.nuget\\packages\\xunit.runner.visualstudio\\2.4.3\\xunit.runner.visualstudio.2.4.3.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Unable to find project 'C:\\Users\\bbruc\\Revature\\Ben-H\\Project0.csproj'. Check that the project reference is valid and that the project file exists.",
-      "libraryId": "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0.csproj",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  "logs": []
 }

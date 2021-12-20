@@ -10,9 +10,8 @@
     <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
   </ItemGroup>
 
-  
-  <ItemGroup>
-    <PackageReference Include="./Project0.Logic/Project0.Logic.csproj" />
+   <ItemGroup>
+    <ProjectReference Include="../Project0.Logic/Project0.Logic.csproj" />
   </ItemGroup>
 
 </Project>

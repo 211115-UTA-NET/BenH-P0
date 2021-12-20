@@ -1,7 +1,7 @@
 namespace Project0.App{
 
     using System.Data.SqlClient;
-    
+    using Project0.App;
     public class Customer{
 
         internal string firstName{get; set;}

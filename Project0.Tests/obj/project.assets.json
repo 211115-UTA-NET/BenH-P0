@@ -6384,7 +6384,6 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0.csproj",
       "Microsoft.NET.Test.Sdk >= 16.11.0",
       "System.Data.SqlClient >= 4.8.3",
       "coverlet.collector >= 3.1.0",
@@ -6418,11 +6417,7 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {
-            "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0.csproj": {
-              "projectPath": "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
@@ -6478,16 +6473,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Unable to find project 'C:\\Users\\bbruc\\Revature\\Ben-H\\Project0.csproj'. Check that the project reference is valid and that the project file exists.",
-      "libraryId": "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0.csproj",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  }
 }

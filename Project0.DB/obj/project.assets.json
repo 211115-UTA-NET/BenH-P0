@@ -130,6 +130,19 @@
             "rid": "win"
           }
         }
+      },
+      "Project0.Logic/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "System.Data.SqlClient": "4.8.3"
+        },
+        "compile": {
+          "bin/placeholder/Project0.Logic.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Project0.Logic.dll": {}
+        }
       }
     }
   },
@@ -446,11 +459,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Project0.Logic/1.0.0": {
+      "type": "project",
+      "path": "../Project0.Logic/Project0.Logic.csproj",
+      "msbuildProject": "../Project0.Logic/Project0.Logic.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "./Project0.Logic/Project0.Logic.csproj",
+      "Project0.Logic >= 1.0.0",
       "System.Data.SqlClient >= 4.8.3"
     ]
   },
@@ -480,7 +498,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0\\Project0.Logic\\Project0.Logic.csproj": {
+              "projectPath": "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0\\Project0.Logic\\Project0.Logic.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -493,10 +515,6 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
-          "./Project0.Logic/Project0.Logic.csproj": {
-            "target": "Package",
-            "version": "(, )"
-          },
           "System.Data.SqlClient": {
             "target": "Package",
             "version": "[4.8.3, )"
@@ -520,26 +538,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1604",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Project dependency ./Project0.Logic/Project0.Logic.csproj does not contain an inclusive lower bound. Include a lower bound in the dependency version to ensure consistent restore results.",
-      "libraryId": "./Project0.Logic/Project0.Logic.csproj",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v6.0"
-      ]
-    },
-    {
-      "code": "NU1101",
-      "level": "Error",
-      "message": "Unable to find package ./Project0.Logic/Project0.Logic.csproj. No packages exist with this id in source(s): Microsoft Visual Studio Offline Packages, nuget.org",
-      "libraryId": "./Project0.Logic/Project0.Logic.csproj",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  }
 }
