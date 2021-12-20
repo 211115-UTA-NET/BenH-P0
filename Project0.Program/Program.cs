@@ -20,7 +20,7 @@
 
             
 */
-            cmd.AddNewLocation("Lucharitos");
+            //cmd.AddNewLocation("Lucharitos");
           
             cmd.placeOrder("1", "1", DateTime.Now, "1", "20");
             
