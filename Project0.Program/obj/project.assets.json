@@ -131,9 +131,23 @@
           }
         }
       },
+      "Project0.App/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Project0.App.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Project0.App.dll": {}
+        }
+      },
       "Project0.DB/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Project0.App": "1.0.0",
+          "System.Data.SqlClient": "4.8.3"
+        },
         "compile": {
           "bin/placeholder/Project0.DB.dll": {}
         },
@@ -457,6 +471,11 @@
         "version.txt"
       ]
     },
+    "Project0.App/1.0.0": {
+      "type": "project",
+      "path": "../Project0.App/Project0.App.csproj",
+      "msbuildProject": "../Project0.App/Project0.App.csproj"
+    },
     "Project0.DB/1.0.0": {
       "type": "project",
       "path": "../Project0.DB/Project0.DB/Project0.DB.csproj",
@@ -465,6 +484,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Project0.App >= 1.0.0",
       "Project0.DB >= 1.0.0",
       "System.Data.SqlClient >= 4.8.3"
     ]
@@ -496,6 +516,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0\\Project0.App\\Project0.App.csproj": {
+              "projectPath": "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0\\Project0.App\\Project0.App.csproj"
+            },
             "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0\\Project0.DB\\Project0.DB\\Project0.DB.csproj": {
               "projectPath": "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0\\Project0.DB\\Project0.DB\\Project0.DB.csproj"
             }

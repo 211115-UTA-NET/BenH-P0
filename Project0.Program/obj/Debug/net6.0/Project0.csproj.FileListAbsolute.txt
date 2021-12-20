@@ -20,3 +20,5 @@ C:\Users\bbruc\Revature\Ben-H\Project0\Project0.Program\obj\Debug\net6.0\ref\Pro
 C:\Users\bbruc\Revature\Ben-H\Project0\Project0.Program\obj\Debug\net6.0\Project0.pdb
 C:\Users\bbruc\Revature\Ben-H\Project0\Project0.Program\obj\Debug\net6.0\Project0.genruntimeconfig.cache
 C:\Users\bbruc\Revature\Ben-H\Project0\Project0.Program\obj\Debug\net6.0\Project0.csproj.AssemblyReference.cache
+C:\Users\bbruc\Revature\Ben-H\Project0\Project0.Program\bin\Debug\net6.0\Project0.DB.dll
+C:\Users\bbruc\Revature\Ben-H\Project0\Project0.Program\bin\Debug\net6.0\Project0.DB.pdb

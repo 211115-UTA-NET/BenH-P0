@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Project0.DB",
+    "\\Project0.Program"
   ],
-  "SelectedNode": "\\Project0.sln",
+  "SelectedNode": "\\Project0.DB\\ben-db-connection-string.txt",
   "PreviewInSolutionExplorer": false
 }
