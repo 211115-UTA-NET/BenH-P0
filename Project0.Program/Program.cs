@@ -2,7 +2,7 @@
     
     using System.Data.SqlClient;
     using Project0.DB;
-    using Project0.App;
+   
     
     public class Program{
 
@@ -14,7 +14,15 @@
 
             DBInteraction cmd = new DBInteraction(connectionString);
 
-            cmd.AddNewCustomer("Bahama", "LLL");
+            /*cmd.AddNewCustomer("Bahama", "LLL");
+
+            cmd.findCustomer("Bahama", "LLL");
+
+            
+*/
+            cmd.AddNewLocation("Lucharitos");
+          
+            cmd.placeOrder("1", "1", DateTime.Now, "1", "20");
             
             
                 

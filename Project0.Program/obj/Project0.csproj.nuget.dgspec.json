@@ -27,7 +27,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0\\Project0.Logic\\Project0.Logic.csproj": {
+                "projectPath": "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0\\Project0.Logic\\Project0.Logic.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -40,10 +44,6 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "./Project0.Logic/Project0.Logic.csproj": {
-              "target": "Package",
-              "version": "(, )"
-            },
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.8.3, )"

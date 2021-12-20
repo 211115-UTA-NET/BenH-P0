@@ -135,7 +135,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "./Project0.Logic/Project0.Logic.csproj": "(, )",
+          "Project0.Logic": "1.0.0",
           "System.Data.SqlClient": "4.8.3"
         },
         "compile": {
@@ -561,16 +561,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1101",
-      "level": "Error",
-      "message": "Unable to find package ./Project0.Logic/Project0.Logic.csproj. No packages exist with this id in source(s): Microsoft Visual Studio Offline Packages, nuget.org",
-      "libraryId": "./Project0.Logic/Project0.Logic.csproj",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  }
 }

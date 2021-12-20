@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "0gEKAu+rI7XdaAqzuDQcThxikOHOzBF6vvpc+8Cqma4KjfAURGdMbRRYUGY2mTNUN6mBCBE3UF6Wr400/fgHEg==",
-  "success": false,
+  "dgSpecHash": "Ng/Q+eZIQzj2n3AnjwtcnZnZmsMirB/OgG9+9od6jv+m9OjACq+KPRSR4mwh/SBj+BUQ825Z5WAu1TIU7oYYTw==",
+  "success": true,
   "projectFilePath": "C:\\Users\\bbruc\\Revature\\Ben-H\\Project0\\Project0.Program\\Project0.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\bbruc\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
@@ -14,15 +14,5 @@
     "C:\\Users\\bbruc\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
     "C:\\Users\\bbruc\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1101",
-      "level": "Error",
-      "message": "Unable to find package ./Project0.Logic/Project0.Logic.csproj. No packages exist with this id in source(s): Microsoft Visual Studio Offline Packages, nuget.org",
-      "libraryId": "./Project0.Logic/Project0.Logic.csproj",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  "logs": []
 }
