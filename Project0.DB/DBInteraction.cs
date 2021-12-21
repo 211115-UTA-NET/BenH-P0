@@ -77,9 +77,9 @@ namespace Project0.DB{
 
         }
 
-         public IEnumerable<String> listOrderDetailsOfCustomer(int customerID)
+         public IEnumerable<Order> listOrderDetailsOfCustomer(int customerID)
         {
-            List<String> result = new();
+            List<Order> result = new();
             
             using SqlConnection connection = new(connectionString);
             connection.Open();
@@ -93,7 +93,7 @@ namespace Project0.DB{
             while(reader.Read())
             {
                 Console.WriteLine($"Customer# {customerID} placed order {reader.GetInt32(0)} on {reader.GetDateTime(3)} ");
-                result.Add(reader.GetInt32(0).ToString());
+                result.Add(new(reader.GetInt32(2), customerID, reader.GetDateTime(3)));
                 
             }
 
@@ -105,9 +105,9 @@ namespace Project0.DB{
      
         }
 
-        public IEnumerable<String> listOrderDetailsOfLocation(int locationID)
+        public IEnumerable<Order> listOrderDetailsOfLocation(int locationID)
         {
-            List<String> result = new();
+            List<Order> result = new();
 
             using SqlConnection connection = new(connectionString);
             connection.Open();
@@ -121,7 +121,7 @@ namespace Project0.DB{
             while (reader.Read())
             {
                 Console.WriteLine($"Location# {locationID} has order {reader.GetInt32(0)} on {reader.GetDateTime(3)} ");
-                result.Add(reader.GetInt32(0).ToString());
+                result.Add(new(locationID, reader.GetInt32(1), reader.GetDateTime(3)));
 
             }
 
@@ -250,7 +250,71 @@ namespace Project0.DB{
             }
         }
         
+        public IEnumerable<String> productCatalogue()
+        {
+            List<String> result = new();
+
+            using SqlConnection connection = new(connectionString);
+
+            connection.Open();
+
+            string cmdText = "SELECT * FROM PRODUCT;";
+
+            using SqlCommand command = new(cmdText, connection);
+
+            using SqlDataReader reader = command.ExecuteReader();
+
+
+            Console.WriteLine("------PRODUCT CATALOGUE------");
+            while (reader.Read())
+            {
+
+                string productID = reader.GetInt32(0).ToString();
+
+                string productName = reader.GetString(1);
+
+                Console.WriteLine($"ID: {productID} Name: {productName}");
+
+                result.Add(productID);
+                result.Add(productName);
+
+            }
+
+            connection.Close();
+
+            return result;
+        }
         
+        public IEnumerable<string> getOrderDetails(int orderID)
+        {
+            List<String> result = new();
+
+            using SqlConnection connection = new(connectionString);
+
+            connection.Open();
+
+            string cmdText = @"SELECT * FROM InvoiceLine WHERE OrderID = @orderID";
+            using SqlCommand command = new(cmdText, connection);
+
+            command.Parameters.AddWithValue("@orderID", orderID);
+
+            using SqlDataReader reader = command.ExecuteReader();
+
+            Console.WriteLine($"------Details of order # {orderID}------");
+            
+            while (reader.Read())
+            {
+                Console.WriteLine($"Line ID: {reader.GetInt32(0)} Product ID: {reader.GetInt32(2)} Quantity: {reader.GetInt32(3)} ");
+                result.Add(reader.GetInt32(0).ToString());
+                result.Add(reader.GetInt32(2).ToString());
+                result.Add(reader.GetInt32(3).ToString());
+
+            }
+
+            connection.Close();
+
+            return result;
+        }
         public void placeOrder(string customerID, string locationID, DateTime date, string productID, int quantity)
         {
          
