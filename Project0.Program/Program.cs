@@ -14,12 +14,17 @@
 
             Console.WriteLine("------------ORDER MANAGEMENT SYSTEM-----------");
 
-            Console.WriteLine("Enter 1 For Menu Options, otherwise enter your instruction");
+            
+            
 
-            int switchController = Convert.ToInt32(Console.ReadLine());
-
-            while (switchController != 8)
+            while (true)
             {
+
+
+                Console.WriteLine("Enter 1 For Menu Options, otherwise enter your instruction");
+
+                int switchController = Convert.ToInt32(Console.ReadLine());
+
 
                 switch (switchController)
                 {
@@ -44,6 +49,12 @@
                     case 7:
                         FindCustomerConsole(cmd);
                         break;
+                    case 8:
+                        cmd.productCatalogue();
+                        break;
+                    case 9:
+                        Environment.Exit(0);
+                        break;
 
                 }
             }
@@ -62,7 +73,8 @@
             Console.WriteLine("5: Location Order List");
             Console.WriteLine("6: Customer Order List");
             Console.WriteLine("7: Search Customer");
-            Console.WriteLine("8: Quit Application");
+            Console.WriteLine("8: Product Catalogue");
+            Console.WriteLine("9: Quit Application");
         }
     
         public static void AddCustomerConsole(DBInteraction cmd)
@@ -148,6 +160,8 @@
 
             string? firstName = Console.ReadLine();  
             string? lastName = Console.ReadLine();
+
+
 
             cmd.findCustomer(firstName, lastName);
         }
