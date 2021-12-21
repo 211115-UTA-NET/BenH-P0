@@ -6,7 +6,7 @@
     
     public class Program{
 
-        public static string connectionString = File.ReadAllText("ben-db-connection-string.txt");
+        public static string connectionString = File.ReadAllText("../../ben-db-connection-string.txt");
         public static void Main(string[] args){
 
 
