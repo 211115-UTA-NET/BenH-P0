@@ -21,9 +21,11 @@
             
 */
             //cmd.AddNewLocation("Lucharitos");
-          
-            cmd.placeOrder("1", "1", DateTime.Now, "1", "20");
-            
+
+           // cmd.placeOrder("1", "1", DateTime.Now, "1", 2);
+            //cmd.listOrderDetailsOfLocation(1);
+
+            cmd.addItemsToOrder("2", "1", 80);
             
                 
                 
