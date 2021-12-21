@@ -12,14 +12,59 @@
         {
             DBInteraction cmd = new DBInteraction(connectionString);
 
-            cmd.getOrderDetails(12);
+            Console.WriteLine("------------ORDER MANAGEMENT SYSTEM-----------");
+
+            Console.WriteLine("Enter 1 For Menu Options, otherwise enter your instruction");
+
+            int switchController = Convert.ToInt32(Console.ReadLine());
+
+            while (switchController != 8)
+            {
+
+                switch (switchController)
+                {
+                    case 1:
+                        MenuOptions();
+                        break;
+                    case 2:
+                        AddCustomerConsole(cmd);
+                        break;
+                    case 3:
+                        AddLocationConsole(cmd);
+                        break;
+                    case 4:
+                        PlaceOrderConsole(cmd);
+                        break;
+                    case 5:
+                        ListLocationOrderConsole(cmd);
+                        break;
+                    case 6:
+                        ListCustomerOrderConsole(cmd);
+                        break;
+                    case 7:
+                        FindCustomerConsole(cmd);
+                        break;
+
+                }
+            }
         }
 
 
 
-        
-        
 
+
+        public static void MenuOptions()
+        {
+            Console.WriteLine("1: Menu Options");
+            Console.WriteLine("2: Add customer");
+            Console.WriteLine("3: Add Location");
+            Console.WriteLine("4: Place Order");
+            Console.WriteLine("5: Location Order List");
+            Console.WriteLine("6: Customer Order List");
+            Console.WriteLine("7: Search Customer");
+            Console.WriteLine("8: Quit Application");
+        }
+    
         public static void AddCustomerConsole(DBInteraction cmd)
         {
             string? firstName;
