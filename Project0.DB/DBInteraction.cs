@@ -10,12 +10,23 @@ namespace Project0.DB{
 
 
         private readonly string connectionString;
+        /// <summary>
+        ///     connection string
+        /// </summary>
+        /// <param name="connectionString"></param>
+        /// <exception cref="ArgumentNullException"></exception>
         public DBInteraction(string connectionString)
         {
             this.connectionString = connectionString ?? throw new ArgumentNullException(nameof(connectionString));
         }
 
-
+        /// <summary>
+        ///     This method adds a new customer to the database
+        /// </summary>
+        /// <param name="firstName"> first name of customer to be added</param>
+        /// <param name="lastName">last name of customer to be added</param>
+       
+        /// <returns>void</returns>
         public void AddNewCustomer(string firstName, string lastName)
         {
 
@@ -32,7 +43,12 @@ namespace Project0.DB{
             connection.Close();
 
         }
+        /// <summary>
+        ///     This method adds a new location to the database
+        /// </summary>
+        /// <param name="storeName"> first name of Location to be added</param>
 
+        /// <returns>void</returns>
         public void AddNewLocation(string storeName)
         {
 
@@ -49,6 +65,14 @@ namespace Project0.DB{
             connection.Close();
 
         }
+        /// <summary>
+        ///     This method searches the database for a given customer
+        ///     and returns a list of IDs attached to the passed name
+        /// </summary>
+        /// <param name="firstName"> first name of customer to be searched for</param>
+        /// <param name="lastName"> last name of customer to be searched</param>
+
+        /// <returns>IEnumerable<Customer></returns>
 
         public IEnumerable<Customer> findCustomer(string firstName, string lastName)
         {
@@ -76,8 +100,16 @@ namespace Project0.DB{
             return result;
 
         }
+        /// <summary>
+        ///     This method lists order details for a given customer
+        /// 
+        /// </summary>
+        /// <param name="customerID"> customerID orders are attached to</param>
 
-         public IEnumerable<Order> listOrderDetailsOfCustomer(int customerID)
+        /// <returns>IEnumerable<Order></returns>
+
+
+        public IEnumerable<Order> listOrderDetailsOfCustomer(int customerID)
         {
             List<Order> result = new();
             
@@ -104,6 +136,13 @@ namespace Project0.DB{
             
      
         }
+        /// <summary>
+        ///     This method lists order details for a given location
+        /// 
+        /// </summary>
+        /// <param name="locationID"> locationID orders are attached to</param>
+
+        /// <returns>IEnumerable<Order></returns>
 
         public IEnumerable<Order> listOrderDetailsOfLocation(int locationID)
         {
@@ -132,7 +171,15 @@ namespace Project0.DB{
 
 
         }
+        /// <summary>
+        ///     decreases the stock of an item in a locations inventory
+        /// 
+        /// </summary>
+        /// <param name="locationID"> location inventory is attached to to</param>
+        /// <param name="productID"> ID of product in inventory</param>
+        /// <param name="amount"> amount to decrease store inventory by</param>
 
+        /// <returns>void</returns>
         public void decreaseStock(string locationID, string productID, int amount)
         {
 
@@ -168,6 +215,17 @@ namespace Project0.DB{
             connection.Close();
 
         }
+        /// <summary>
+        ///    supplementary method to placeOrder.
+        /// 
+        /// </summary>
+        /// <param name="locationID"> ID of location</param>
+        /// <param name="productID"> ID of product to be ordered</param>
+        /// <param name="quantity"> amount to be ordered of product</param>
+        /// <param name="orderID"> ID of order to be added to</param>
+        
+
+        /// <returns>void</returns>
 
         public void addItemsToOrder(string orderID, string locationID, string productID, int quantity)
         {
@@ -194,6 +252,12 @@ namespace Project0.DB{
             connection.Close();
         }
 
+        /// <summary>
+        ///    a method to get an orderId attached to a certain date.
+        /// 
+        /// </summary>
+        /// <param name="date"> date of order to be searched for</param>
+        /// <returns>id of order with associated date</returns>
         public int getOrderIDFromDate(DateTime date)
         {
 
@@ -219,6 +283,17 @@ namespace Project0.DB{
 
             return orderID;
         }
+
+        /// <summary>
+        ///    Checks to see if store has enough remaining inventory to process order
+        /// 
+        /// </summary>
+        /// <param name="locationID"> ID of location</param>
+        /// <param name="productID"> ID of product to be ordered</param>
+        /// <param name="quantity"> amount to be ordered of product</param>
+
+
+        /// <returns>true/false, true if there is enough inventory</returns>
 
         public bool checkStoreHasEnough(string locationID, string productID, int quantity)
         {
@@ -253,7 +328,11 @@ namespace Project0.DB{
                 return true;
             }
         }
-        
+        /// <summary>
+        ///   Lists all products in database and their associated IDs
+        /// 
+        /// </summary>
+        /// <returns>List of products available and their associated IDs</returns>
         public IEnumerable<String> productCatalogue()
         {
             List<String> result = new();
@@ -288,7 +367,13 @@ namespace Project0.DB{
 
             return result;
         }
-        
+
+        /// <summary>
+        /// Gets details of an order given an orderID
+        /// </summary>
+        /// <param name="orderID"> ID of order</param>
+        /// <returns>a list of order details associated with the order</returns>
+
         public IEnumerable<string> getOrderDetails(int orderID)
         {
             List<String> result = new();
@@ -319,6 +404,17 @@ namespace Project0.DB{
 
             return result;
         }
+
+        /// <summary>
+        ///    Places an order for a customer and updates the values in the database
+        /// 
+        /// </summary>
+        /// <param name="locationID"> ID of location to be ordered from</param>
+        /// <param name="productID"> ID of product to be ordered</param>
+        /// <param name="quantity"> amount to be ordered of product</param>
+        /// <param name="date"> date the order is processed</param>
+        ///<param name="customerID"> ID of customer doing the ordering</param>
+        /// <returns>void</returns>
         public void placeOrder(string customerID, string locationID, DateTime date, string productID, int quantity)
         {
          
