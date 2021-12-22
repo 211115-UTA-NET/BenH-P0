@@ -178,7 +178,8 @@ namespace Project0.DB{
 
             if (checkStoreHasEnough(locationID, productID, quantity))
             {
-                using SqlCommand command = new(@"INSERT INTO InvoiceLine (OrderID, ProductID, Quantity) VALUES (@orderID, @productID, @quantity); ", connection);
+                using SqlCommand command = new(@"INSERT INTO InvoiceLine (OrderID, ProductID, Quantity) 
+                                                VALUES (@orderID, @productID, @quantity); ", connection);
                 command.Parameters.AddWithValue("@orderID", orderID);
                 command.Parameters.AddWithValue("@productID", productID);
                 command.Parameters.AddWithValue("@quantity", quantity);
@@ -186,6 +187,8 @@ namespace Project0.DB{
                 command.ExecuteNonQuery();
 
                 connection.Close();
+
+                decreaseStock(locationID, productID, quantity);
             }
 
             connection.Close();
@@ -225,7 +228,8 @@ namespace Project0.DB{
 
             connection.Open();
 
-            using SqlCommand command4 = new(@"SELECT Stock FROM LocationInventory WHERE LocationID = @locationID AND ProductID = @productID; ", connection);
+            using SqlCommand command4 = new(@"SELECT Stock FROM LocationInventory WHERE LocationID = @locationID 
+                                            AND ProductID = @productID; ", connection);
 
             command4.Parameters.AddWithValue("@locationID", locationID);
             command4.Parameters.AddWithValue("@productID", productID);
@@ -327,7 +331,8 @@ namespace Project0.DB{
              
                 connection.Open();
 
-                string cmdText = @"INSERT INTO Invoice (CustomerId, LocationId, OrderDate) VALUES (@customerID, @locationID, @date);";
+                string cmdText = @"INSERT INTO Invoice (CustomerId, LocationId, OrderDate) 
+                                    VALUES (@customerID, @locationID, @date);";
                 using SqlCommand command = new(cmdText, connection);
 
                 command.Parameters.AddWithValue("@customerID", customerID);
@@ -342,7 +347,8 @@ namespace Project0.DB{
 
                 connection.Open();
 
-                cmdText = @"INSERT INTO InvoiceLine (OrderID, ProductID, Quantity) VALUES (@orderID, @productID, @quantity);";
+                cmdText = @"INSERT INTO InvoiceLine (OrderID, ProductID, Quantity)
+                             VALUES (@orderID, @productID, @quantity);";
 
                 using SqlCommand command3 = new(cmdText, connection);
 

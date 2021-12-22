@@ -106,7 +106,7 @@
             storeName = Console.ReadLine();
 
             
-            cmd.AddNewLocation(storeName ?? "INVALID ENTRY");
+            cmd.AddNewLocation(storeName ?? "Invalid entry");
 
             Console.WriteLine($"{storeName} added to database");
 
@@ -116,16 +116,44 @@
         public static void PlaceOrderConsole(DBInteraction cmd)
         {
 
-            Console.WriteLine("Enter Customer ID: ");
-            string? customerID = Console.ReadLine();
+            Console.WriteLine("Enter Customer ID: ") ;
+            string? customerID = Console.ReadLine() ?? "1";
             Console.WriteLine("Enter location ID: ");
-            string? locationID = Console.ReadLine();
+            string? locationID = Console.ReadLine() ?? "1";
             Console.WriteLine("Enter Product ID: ");
-            string? productID = Console.ReadLine();
+            string? productID = Console.ReadLine() ?? "1";
             Console.WriteLine("Enter Quantity");
             int quantity = Convert.ToInt32(Console.ReadLine());
 
-            cmd.placeOrder(customerID, locationID, DateTime.Now, productID, quantity);
+            DateTime date = DateTime.Now;
+
+            cmd.placeOrder(customerID, locationID, date, productID, quantity);
+
+
+            while (true)
+            {
+                Console.WriteLine("Add more items to order? (Y/N)");
+                string prompt = Console.ReadLine() ?? "N";
+
+                if (prompt == "Y")
+                {
+                    Console.WriteLine("Enter Product ID: ");
+                    productID = Console.ReadLine() ?? "1";
+                    Console.WriteLine("Enter Quantity");
+                    quantity = Convert.ToInt32(Console.ReadLine());
+
+                    cmd.addItemsToOrder(cmd.getOrderIDFromDate(date).ToString(), locationID, productID, quantity);
+                }else if (prompt == "N")
+                {
+                    break;
+                }else
+                {
+                    Console.WriteLine("Invalid response");
+                }
+
+                
+            }
+            cmd.getOrderDetails(cmd.getOrderIDFromDate(date));
         }
 
         public static void ListLocationOrderConsole(DBInteraction cmd)
@@ -158,8 +186,8 @@
         {
             Console.WriteLine("Enter the first name followed by the last name");
 
-            string? firstName = Console.ReadLine();  
-            string? lastName = Console.ReadLine();
+            string? firstName = Console.ReadLine() ?? "Null";  
+            string? lastName = Console.ReadLine() ?? "Null";
 
 
 
